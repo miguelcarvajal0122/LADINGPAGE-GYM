@@ -1,158 +1,180 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carasán Fit | Gimnasio Profesional</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casaran Fit | Gimnasio</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-  <!-- ===== HEADER ===== -->
+  <!-- ===== HEADER / NAVBAR ===== -->
   <header class="navbar">
     <div class="logo">
-      <img src="images/logo.png" alt="Logo Carasán Fit">
-      <h1>Carasán <span>Fit</span></h1>
+      <h1>CASARAN FIT</h1>
     </div>
+
     <nav>
       <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#entrenamientos">Entrenamientos</a></li>
-        <li><a href="#planes">Planes</a></li>
-        <li><a href="#entrenadores">Entrenadores</a></li>
-        <li><a href="#eventos">Eventos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#inicio">INICIO</a></li>
+        <li><a href="#entrenamientos">ENTRENAMIENTOS</a></li>
+        <li><a href="#planes">PLANES</a></li>
+        <li><a href="#entrenadores">ENTRENADORES</a></li>
+        <li><a href="#contacto">CONTACTO</a></li>
       </ul>
     </nav>
-    <a href="#planes" class="btn-header">Únete Hoy</a>
+
+    <div class="nav-right">
+      <a href="#" class="btn-acceder">ACCEDER</a>
+    </div>
   </header>
 
-  <!-- ===== HERO / BANNER ===== -->
-  <section id="inicio" class="hero">
-    <div class="hero-content">
-      <h2>Transforma tu cuerpo. Transforma tu mente.</h2>
-      <p>Entrena con los mejores en <strong>Carasán Fit</strong> y alcanza tu máximo rendimiento.</p>
-      <div class="hero-buttons">
-        <a href="#planes" class="btn btn-primary">Ver Planes</a>
-        <a href="#contacto" class="btn btn-secondary">Únete Ahora</a>
-      </div>
+  <!-- ===== BANNER / INICIO ===== -->
+  <section id="inicio" class="banner">
+    <div class="banner-content">
+      <h2>Transforma tu cuerpo, transforma tu vida</h2>
+      <p>En <strong>Casaran Fit</strong> te ayudamos a alcanzar tu mejor versión.</p>
+      <a href="#planes" class="btn btn--primary">Ver planes</a>
     </div>
   </section>
 
-  <main>
+  <!-- ===== ENTRENAMIENTOS ===== -->
+  <section id="entrenamientos" class="section entrenamientos">
+    <h2>Tipos de Entrenamiento</h2>
+    <div class="grid">
+      <article>
+        <img src="imagenes/pareja-entrenando-en-gimnasio.jpg" alt="Entrenamiento en pareja">
+        <h3>Entrenamiento Funcional</h3>
+        <p>Ejercicios que mejoran fuerza, equilibrio y resistencia general.</p>
+      </article>
 
-    <!-- ===== ENTRENAMIENTOS ===== -->
-    <section id="entrenamientos" class="section trainings">
-      <h2>Tipos de Entrenamiento</h2>
-      <div class="cards">
-        <article class="card">
-          <img src="images/entrenamiento1.jpg" alt="CrossFit">
-          <h3>CrossFit</h3>
-          <p>Ejercicios funcionales de alta intensidad para desafiar tus límites.</p>
-        </article>
-        <article class="card">
-          <img src="images/entrenamiento2.jpg" alt="Pesas">
-          <h3>Pesas y Fuerza</h3>
-          <p>Fortalece tu cuerpo y desarrolla masa muscular con nuestros programas guiados.</p>
-        </article>
-        <article class="card">
-          <img src="images/entrenamiento3.jpg" alt="Yoga">
-          <h3>Yoga</h3>
-          <p>Encuentra el equilibrio entre mente y cuerpo en nuestras clases relajantes.</p>
-        </article>
-        <article class="card">
-          <img src="images/entrenamiento4.jpg" alt="Funcional">
-          <h3>Entrenamiento Funcional</h3>
-          <p>Mejora tu coordinación, agilidad y fuerza con ejercicios dinámicos.</p>
-        </article>
-      </div>
-    </section>
+      <article>
+        <img src="imagenes/atleta-femenina-joven-haciendo-ejercicios-abdominales-con-placa-de-peso-en-el-club-de-salud.jpg" alt="Entrenamiento personal">
+        <h3>Entrenamiento Personalizado</h3>
+        <p>Un plan diseñado para tus objetivos y condición física.</p>
+      </article>
 
-    <!-- ===== PLANES ===== -->
-    <section id="planes" class="section plans">
-      <h2>Planes de Entrenamiento</h2>
-      <div class="plan-container">
-        <div class="plan-card">
-          <h3>Básico</h3>
-          <p>Acceso al gimnasio y zonas de entrenamiento.</p>
-          <span>$60.000 / mes</span>
-          <a href="#" class="btn-plan">Elegir Plan</a>
-        </div>
+      <article>
+        <img src="imagenes/gente-haciendo-ciclismo-indoor.jpg" alt="Ciclismo indoor">
+        <h3>Ciclismo Indoor</h3>
+        <p>Sesiones de alta energía con música y ambiente motivador.</p>
+      </article>
+    </div>
+  </section>
 
-        <div class="plan-card destacado">
-          <h3>Pro</h3>
-          <p>Incluye asesor personalizado y seguimiento semanal.</p>
-          <span>$90.000 / mes</span>
-          <a href="#" class="btn-plan">Elegir Plan</a>
-        </div>
+  <!-- ===== PLANES ===== -->
+  <section id="planes" class="section planes">
+    <h2>Nuestros Planes</h2>
+    <div class="grid">
+      <article>
+        <h3>Plan Básico</h3>
+        <p>Acceso libre a todas las máquinas.</p>
+        <p><strong>$60.000 / mes</strong></p>
+        <a href="#" class="btn-card">INSCRÍBETE</a>
+      </article>
 
-        <div class="plan-card">
-          <h3>Elite</h3>
-          <p>Acceso total, nutricionista y participación en eventos exclusivos.</p>
-          <span>$130.000 / mes</span>
-          <a href="#" class="btn-plan">Elegir Plan</a>
-        </div>
-      </div>
-    </section>
+      <article>
+        <h3>Plan Premium</h3>
+        <p>Incluye clases grupales, asesoría personalizada y sauna.</p>
+        <p><strong>$100.000 / mes</strong></p>
+        <a href="#" class="btn-card">INSCRÍBETE</a>
+      </article>
 
-    <!-- ===== ENTRENADORES ===== -->
-    <section id="entrenadores" class="section trainers">
-      <h2>Nuestros Entrenadores</h2>
-      <div class="trainer-container">
-        <div class="trainer-card">
-          <img src="images/entrenador1.jpg" alt="Entrenador Juan">
-          <h3>Juan Pérez</h3>
-          <p>Entrenador de fuerza y acondicionamiento.</p>
-        </div>
-        <div class="trainer-card">
-          <img src="images/entrenador2.jpg" alt="Entrenadora Laura">
-          <h3>Laura Gómez</h3>
-          <p>Especialista en yoga y entrenamiento funcional.</p>
-        </div>
-        <div class="trainer-card">
-          <img src="images/entrenador3.jpg" alt="Entrenador Carlos">
-          <h3>Carlos Ruiz</h3>
-          <p>Entrenador personal y coach motivacional.</p>
-        </div>
-      </div>
-    </section>
+      <article>
+        <h3>Plan Elite</h3>
+        <p>Acceso VIP, entrenador personal y nutricionista.</p>
+        <p><strong>$150.000 / mes</strong></p>
+        <a href="#" class="btn-card">INSCRÍBETE</a>
+      </article>
+    </div>
+  </section>
 
-    <!-- ===== EVENTOS ===== -->
-    <section id="eventos" class="section events">
-      <h2>Próximos Eventos</h2>
-      <div class="event-container">
-        <article class="event-card">
-          <img src="images/evento1.jpg" alt="Reto 30 días">
-          <h3>Reto 30 Días</h3>
-          <p>Únete al desafío y transforma tu cuerpo en solo un mes.</p>
-        </article>
-        <article class="event-card">
-          <img src="images/evento2.jpg" alt="Clases grupales">
-          <h3>Clases Grupales</h3>
-          <p>Entrena con tu grupo favorito y potencia tu motivación.</p>
-        </article>
-      </div>
-    </section>
+  <!-- ===== ENTRENADORES ===== -->
+  <section id="entrenadores" class="section entrenadores">
+    <h2>Nuestros Entrenadores</h2>
+    <div class="grid">
+      <article>
+        <img src="imagenes/hombre-de-deportes-en-el-gimnasio-un-hombre-realiza-ejercicios-chico-en-una-camiseta.jpg" alt="Entrenador 1">
+        <h3>Juan Pérez</h3>
+        <p>Especialista en musculación y entrenamiento de fuerza.</p>
+      </article>
 
-    <!-- ===== CONTACTO ===== -->
-    <section id="contacto" class="section contact">
-      <h2>Contáctanos</h2>
-      <p>📍 Cra 12 #45-67, Jamundí, Valle del Cauca</p>
-      <p>📞 +57 300 456 7890 | ✉️ info@carasanfit.com</p>
-      <div class="socials">
-        <a href="#">Instagram</a> |
-        <a href="#">Facebook</a> |
-        <a href="#">TikTok</a>
-      </div>
-    </section>
+      <article>
+        <img src="imagenes/mujer-porcion-en-gimnasio.jpg" alt="Entrenadora 2">
+        <h3>Laura Gómez</h3>
+        <p>Entrenadora certificada en crossfit y cardio funcional.</p>
+      </article>
 
-  </main>
+      <article>
+        <img src="imagenes/mujer-sosteniendo-pesas-cerca-de-pesas.jpg" alt="Entrenadora 3">
+        <h3>Mariana Torres</h3>
+        <p>Experta en tonificación, bienestar y entrenamiento femenino.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== EVENTOS ===== -->
+  <section id="eventos" class="section eventos">
+    <h2>Eventos y Actividades</h2>
+    <div class="grid">
+      <article>
+        <img src="imagenes/mujer-de-tiro-completo-ayudando-hombre-en-el-gimnasio.jpg" alt="Evento 1">
+        <h3>Semana del Fitness</h3>
+        <p>Clases abiertas y actividades gratuitas para todos los miembros.</p>
+      </article>
+
+      <article>
+        <img src="imagenes/vista-de-angulo-bajo-del-hombre-musculoso-irreconocible-preparandose-para-levantar-una-barra-en-un-club-de-salud.jpg" alt="Evento 2">
+        <h3>Competencia Interna</h3>
+        <p>Pon a prueba tu resistencia y gana premios exclusivos Casaran Fit.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+<!-- ===== CONTACTO ===== -->
+<section class="section contacto">
+  <h2>CONTÁCTANOS</h2>
+  <p class="descripcion-contacto">¿Tienes preguntas? ¡Estamos para ayudarte en Casaran Fit!</p>
+
+  <div class="contacto-info">
+    <div class="info-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <p><strong>Dirección:</strong> Calle 10 #15-45, Jamundí, Valle del Cauca</p>
+    </div>
+
+    <div class="info-item">
+      <i class="fas fa-phone-alt"></i>
+      <p><strong>Teléfono:</strong> +57 312 555 6789</p>
+    </div>
+
+    <div class="info-item">
+      <i class="fas fa-envelope"></i>
+      <p><strong>Email:</strong> contacto@casaranfit.com</p>
+    </div>
+
+    <div class="info-item">
+      <i class="fab fa-instagram"></i>
+      <p><strong>Instagram:</strong> @casaranfitoficial</p>
+    </div>
+
+    <div class="info-item">
+      <i class="fab fa-facebook"></i>
+      <p><strong>Facebook:</strong> Casaran Fit Gym</p>
+    </div>
+  </div>
+</section>
+
+<!-- Agrega esto en el head si no lo tienes -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <p>© 2025 Carasán Fit. Todos los derechos reservados.</p>
+    <p>© 2025 Casaran Fit | Todos los derechos reservados.</p>
   </footer>
 
 </body>

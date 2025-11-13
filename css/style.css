@@ -1,289 +1,371 @@
-/* ===== RESET ===== */
+/* ====== RESET GENERAL ====== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f5f5f5;
-  color: #111;
-  line-height: 1.6;
+
+html {
+  scroll-behavior: smooth;
 }
 
-/* ===== NAVBAR ===== */
-.navbar {
-  background: #111;
+body {
+  font-family: 'Poppins', sans-serif;
   color: #fff;
+  line-height: 1.6;
+  background-color: #111;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 15px 60px;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #0c0c0c;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
 }
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.logo img {
-  width: 50px;
-}
+
 .logo h1 {
-  font-weight: 700;
   font-size: 22px;
+  font-weight: 800;
+  color: #ff2e2e;
+  letter-spacing: 1px;
 }
-.logo span {
-  color: #e63946;
-}
+
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 20px;
-}
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color .3s;
-}
-.nav-links a:hover {
-  color: #e63946;
-}
-.btn-header {
-  background: #e63946;
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
+  gap: 30px;
 }
 
-/* ===== HERO ===== */
-.hero {
-  background-image: url("../images/banner.jpg");
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff2e2e;
+}
+
+.nav-right .btn-acceder {
+  background-color: #ff2e2e;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.nav-right .btn-acceder:hover {
+  background-color: #c11c1c;
+}
+
+/* ====== BANNER ====== */
+.banner {
+  background-image: url("../imagenes/atractiva-pareja-de-culturistas-posando-cerca-de-un-soporte-cruzado-en-un-club-de-gimnasia.jpg");
   background-size: cover;
   background-position: center;
   height: 90vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  color: #fff;
   position: relative;
 }
-.hero::after {
+
+.banner::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.5);
 }
-.hero-content {
+
+.banner-content {
+  position: relative;
   z-index: 2;
+  color: #fff;
   max-width: 700px;
 }
-.hero-content h2 {
+
+.banner-content h2 {
   font-size: 42px;
+  font-weight: 800;
   margin-bottom: 15px;
 }
-.hero-content p {
-  margin-bottom: 25px;
+
+.banner-content p {
   font-size: 18px;
+  margin-bottom: 25px;
 }
+
 .btn {
+  display: inline-block;
+  background-color: #ff2e2e;
+  color: #fff;
   padding: 12px 25px;
   border-radius: 25px;
   text-decoration: none;
-  font-weight: 600;
-}
-.btn-primary {
-  background-color: #e63946;
-  color: #fff;
-}
-.btn-secondary {
-  border: 2px solid #fff;
-  color: #fff;
-  margin-left: 10px;
+  font-weight: 700;
+  transition: 0.3s;
 }
 
-/* ===== SECCIONES ===== */
+.btn:hover {
+  background-color: #c11c1c;
+}
+
+/* ====== SECCIONES ====== */
 .section {
-  padding: 70px 60px;
+  padding: 80px 10%;
   text-align: center;
-  background-color: #fff;
-  margin: 40px auto;
-  border-radius: 10px;
-  max-width: 1200px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-.section h2 {
-  font-size: 28px;
-  margin-bottom: 40px;
-  color: #e63946;
 }
 
-/* ===== ENTRENAMIENTOS ===== */
-.cards {
+.section h2 {
+  font-size: 30px;
+  color: #ff2e2e;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ====== ENTRENAMIENTOS ====== */
+.entrenamientos {
+  background-color: #181818;
+}
+
+.grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
   justify-content: center;
+  gap: 30px;
 }
-.card {
-  background: #f8f8f8;
-  width: 260px;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+
+.entrenamientos article {
+  background-color: #202020;
+  border-radius: 10px;
+  width: 300px;
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
-.card img {
+
+.entrenamientos article:hover {
+  transform: translateY(-10px);
+}
+
+.entrenamientos img {
   width: 100%;
-  height: 180px;
+  height: 220px;
   object-fit: cover;
 }
-.card h3 {
-  margin: 15px 0 8px;
-  color: #111;
+
+.entrenamientos h3 {
+  color: #fff;
+  margin: 15px 0 10px;
 }
-.card p {
+
+.entrenamientos p {
+  color: #aaa;
   font-size: 14px;
   padding: 0 15px 20px;
-  color: #444;
 }
 
-/* ===== PLANES ===== */
-.plan-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  justify-content: center;
+/* ====== PLANES ====== */
+.planes {
+  background-color: #121212;
 }
-.plan-card {
-  width: 260px;
-  background: #fff;
-  border: 2px solid #e63946;
-  border-radius: 8px;
-  padding: 25px 15px;
-  text-align: center;
+
+.planes .grid article {
+  background-color: #1c1c1c;
+  padding: 30px;
+  border-radius: 10px;
+  width: 280px;
+  transition: 0.3s ease;
+  border: 1px solid transparent;
 }
-.plan-card.destacado {
-  background: #e63946;
+
+.planes .grid article:hover {
+  border-color: #ff2e2e;
+  transform: translateY(-8px);
+}
+
+.planes h3 {
   color: #fff;
-  transform: scale(1.05);
-}
-.plan-card h3 {
-  font-size: 20px;
   margin-bottom: 10px;
 }
-.plan-card p {
+
+.planes p {
+  color: #ccc;
   font-size: 14px;
   margin-bottom: 10px;
 }
-.plan-card span {
-  font-weight: 700;
-  display: block;
-  margin-bottom: 15px;
-}
-.btn-plan {
+
+.btn-card {
   display: inline-block;
-  padding: 8px 18px;
-  background: #111;
+  background-color: #ff2e2e;
   color: #fff;
+  padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
+  transition: 0.3s ease;
 }
 
-/* ===== ENTRENADORES ===== */
-.trainer-container {
-  display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
-  justify-content: center;
+.btn-card:hover {
+  background-color: #c11c1c;
 }
-.trainer-card {
-  background: #fff;
-  width: 240px;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+
+/* ====== ENTRENADORES ====== */
+.entrenadores {
+  background-color: #181818;
 }
-.trainer-card img {
+
+.entrenadores img {
   width: 100%;
-  border-radius: 50%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.entrenadores article {
+  background-color: #202020;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.entrenadores article:hover {
+  transform: translateY(-10px);
+}
+
+.entrenadores h3 {
+  margin-top: 10px;
+  color: #ff2e2e;
+}
+
+.entrenadores p {
+  font-size: 13px;
+  color: #ccc;
+  padding: 10px 15px 20px;
+}
+
+/* ====== EVENTOS ====== */
+.eventos {
+  background-color: #121212;
+}
+
+.eventos article {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  width: 320px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.eventos article:hover {
+  transform: translateY(-10px);
+}
+
+.eventos img {
+  width: 100%;
   height: 200px;
   object-fit: cover;
-  margin-bottom: 15px;
 }
 
-/* ===== EVENTOS ===== */
-.event-container {
+.eventos h3 {
+  color: #fff;
+  margin: 15px 0 5px;
+}
+
+.eventos p {
+  color: #ccc;
+  font-size: 13px;
+  padding: 0 15px 20px;
+}
+
+/* ====== CONTACTO ====== */
+/* ====== CONTACTO ====== */
+.contacto {
+  background-color: #181818;
+  text-align: center;
+}
+
+.descripcion-contacto {
+  color: #ccc;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+.contacto-info {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
-}
-.event-card {
-  width: 300px;
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-}
-.event-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-.event-card h3 {
-  color: #111;
-  margin: 12px 0 6px;
-}
-.event-card p {
-  font-size: 14px;
-  color: #444;
-  padding: 0 10px 15px;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* ===== CONTACTO ===== */
-.contact p {
-  margin-bottom: 10px;
-}
-.socials a {
-  text-decoration: none;
-  color: #e63946;
-  font-weight: 600;
-}
-
-/* ===== FOOTER ===== */
-.footer {
-  background: #111;
-  color: #fff;
-  text-align: center;
+.info-item {
+  background-color: #1f1f1f;
+  border-radius: 10px;
   padding: 20px;
-  font-size: 14px;
-  margin-top: 40px;
+  width: 250px;
+  transition: transform 0.3s ease, background 0.3s;
 }
 
-/* ===== RESPONSIVE ===== */
+.info-item:hover {
+  background-color: #ff2e2e;
+  transform: translateY(-8px);
+}
+
+.info-item i {
+  font-size: 30px;
+  color: #ff2e2e;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.info-item:hover i {
+  color: #fff;
+}
+
+.info-item p {
+  color: #ddd;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.info-item strong {
+  color: #fff;
+}
+
+/* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
-  .navbar {
-    flex-wrap: wrap;
-    justify-content: center;
+  .nav-links {
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
     text-align: center;
-    gap: 10px;
+    display: none;
   }
-  .hero-content h2 {
-    font-size: 30px;
-  }
-  .cards, .plan-container, .trainer-container, .event-container {
+
+  .grid {
     flex-direction: column;
     align-items: center;
   }
+
+  .contact-form {
+    width: 90%;
+  }
 }
-
-
-
-
