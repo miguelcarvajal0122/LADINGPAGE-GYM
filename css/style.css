@@ -234,7 +234,8 @@ body {
   border-radius: 10px 10px 0 0;
 }
 
-.entrenadores article {
+.entrenadores article,
+.trainer-card {
   background-color: #202020;
   width: 300px;
   border-radius: 10px;
@@ -242,7 +243,8 @@ body {
   transition: 0.3s ease;
 }
 
-.entrenadores article:hover {
+.entrenadores article:hover,
+.trainer-card:hover {
   transform: translateY(-10px);
 }
 
@@ -291,7 +293,6 @@ body {
   padding: 0 15px 20px;
 }
 
-/* ====== CONTACTO ====== */
 /* ====== CONTACTO ====== */
 .contacto {
   background-color: #181818;
@@ -347,25 +348,107 @@ body {
   color: #fff;
 }
 
-/* ====== RESPONSIVE ====== */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    background-color: #111;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    display: none;
-  }
+/* ====== FOOTER ====== */
+.footer {
+  padding: 25px;
+  background-color: #0c0c0c;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  margin-top: 40px;
+}
 
+/* ======================================================
+            FORMULARIO EMERGENTE (MODAL)
+====================================================== */
+#form-inscripcion {
+  display: none; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1c1c1c;
+  padding: 30px;
+  border-radius: 12px;
+  width: 380px;
+  z-index: 200;
+  box-shadow: 0 0 25px rgba(0,0,0,0.8);
+}
+
+#form-inscripcion h2 {
+  color: #ff2e2e;
+  margin-bottom: 20px;
+}
+
+#form-inscripcion label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  color: #ddd;
+}
+
+#form-inscripcion input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 15px;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+#form-inscripcion button[type="submit"] {
+  background-color: #ff2e2e;
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#form-inscripcion button[type="submit"]:hover {
+  background-color: #c11c1c;
+}
+
+/* Botón cerrar */
+.btn-cerrar {
+  margin-top: 10px;
+  background: #444;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-cerrar:hover {
+  background-color: #666;
+}
+
+/* Fondo oscuro detrás del modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 150;
+}
+
+/* ======================================================
+            RESPONSIVE
+====================================================== */
+
+@media (max-width: 768px) {
   .grid {
     flex-direction: column;
     align-items: center;
   }
 
-  .contact-form {
+  #form-inscripcion {
     width: 90%;
   }
 }
